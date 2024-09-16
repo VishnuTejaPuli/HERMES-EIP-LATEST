@@ -1,0 +1,58 @@
+/* .container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+} */
+.container {
+  display: flex;
+  width: 100%;
+  padding: 20px; /* Add padding to the container */
+  gap: 20px; /* Space between elements */
+}
+
+/* app-sidenav {
+  width: 900px; /* Set a fixed width for the sidenav 
+} */
+
+.content {
+  display: flex; /* Use flex to place items side by side */
+  flex-grow: 1; /* Allow this container to take available space */
+  /* margin-left: -400px; */
+}
+
+.app-w-alert {
+  width: 300px; /* Fixed width for weather alerts */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* Stack button and forms vertically */
+  flex-grow: 1; /* Allow this container to take available space */
+  margin-left: 20px; /* Space between weather alerts and the form */
+}
+
+button {
+  margin-bottom: 20px; /* Space below the button */
+  padding: 10px 20px; /* Padding for the button */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.app-w-alert,
+.app-incident-report-common,
+.app-relief-camp-search {
+  padding: 20px; /* Add padding to components */
+  border: 1px solid #ccc; /* Optional: Add border for separation */
+  border-radius: 5px; /* Rounded corners for components */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

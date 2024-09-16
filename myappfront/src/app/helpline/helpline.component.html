@@ -1,0 +1,41 @@
+<app-sidenav></app-sidenav>
+<div class="helpline-container">
+  <h2>National Helplines and Websites</h2>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by Name"
+      [(ngModel)]="searchName"
+      (input)="searchHelplines()"
+    />
+    <input
+      type="text"
+      placeholder="Search by Region"
+      [(ngModel)]="searchRegion"
+      (input)="searchHelplines()"
+    />
+  </div>
+
+  <div class="helpline-list">
+    <h3>Helpline Numbers</h3>
+    <div *ngFor="let helpline of helplineNumbers" class="helpline-item">
+      <p><strong>Name:</strong> {{ helpline.name }}</p>
+      <p>
+        <strong>Phone numbers:</strong
+        ><a [href]="helpline.phoneNumber">{{ helpline.phoneNumber }}</a>
+      </p>
+      <p><strong>Region:</strong> {{ helpline.region }}</p>
+    </div>
+
+    <h3>Helpline Websites</h3>
+    <div *ngFor="let website of helplineWebsites" class="helpline-item">
+      <p><strong>Name:</strong> {{ website.name }}</p>
+      <p>
+        <strong>URL:</strong>
+        <a [href]="website.website" target="_blank">{{ website.website }}</a>
+      </p>
+      <p><strong>Region:</strong> {{ website.region }}</p>
+    </div>
+  </div>
+</div>

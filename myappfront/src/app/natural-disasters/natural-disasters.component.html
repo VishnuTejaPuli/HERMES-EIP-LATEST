@@ -1,0 +1,36 @@
+<!-- <div class="container">
+  <app-sidenav></app-sidenav>
+  <button (click)="istrue()" *ngIf="!search; else #mytemp">
+    Incident Reporting
+  </button>
+  <ng-template #mytemp>
+    <button>Relief Camps</button>
+  </ng-template>
+  <app-w-alert></app-w-alert>
+  <app-incident-report-common></app-incident-report-common>
+  <app-relief-camp-search></app-relief-camp-search>
+</div> -->
+<div class="container">
+  <app-sidenav></app-sidenav>
+
+  <div class="content">
+    <app-w-alert></app-w-alert>
+
+    <div class="form-container">
+      <button (click)="toggleForm()" *ngIf="search; else reliefCampButton">
+        Incident Reporting
+      </button>
+      <ng-template #reliefCampButton>
+        <button (click)="toggleForm()">Relief Camps</button>
+      </ng-template>
+
+      <ng-container *ngIf="search; else incidentForm">
+        <app-relief-camp-search></app-relief-camp-search>
+      </ng-container>
+
+      <ng-template #incidentForm>
+        <app-incident-report-common></app-incident-report-common>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<app-sidenav></app-sidenav>
+<div>
+  <h2>Login</h2>
+  <form (ngSubmit)="login()">
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      [(ngModel)]="username"
+      name="username"
+      required
+    />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Login</button>
+    <!-- <button (click)="logout()" class="btn btn-danger">Logout</button> -->
+    <!-- <h2>{{response}}</h2> -->
+  </form>
+</div>

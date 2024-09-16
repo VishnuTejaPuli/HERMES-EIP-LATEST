@@ -1,0 +1,110 @@
+<div>
+  <h2>Incident Reports</h2>
+  <!-- <ul>
+    <li *ngFor="let report of reports">
+      {{ report.reportId }} - {{ report.typeOfIncident }}
+    </li>
+  </ul> -->
+
+  <h3>Add New Report</h3>
+  <form (ngSubmit)="addReport()">
+    <label for="reportId">Report ID:</label>
+    <input
+      type="text"
+      id="reportId"
+      [(ngModel)]="newReport.reportId"
+      name="reportId"
+      required
+    />
+
+    <label for="reportCode">Report Code:</label>
+    <input
+      type="text"
+      id="reportCode"
+      [(ngModel)]="newReport.reportCode"
+      name="reportCode"
+      required
+      pattern="[0-9]*"
+      inputmode="numeric"
+      title="Please enter numbers only"
+    />
+
+    <label for="typeOfIncident">Type of Incident:</label>
+    <input
+      type="text"
+      id="typeOfIncident"
+      [(ngModel)]="newReport.typeOfIncident"
+      name="typeOfIncident"
+      required
+    />
+
+    <label for="descriptionOfIncident">Description of Incident:</label>
+    <textarea
+      id="descriptionOfIncident"
+      [(ngModel)]="newReport.descriptionOfIncident"
+      name="descriptionOfIncident"
+      required
+    ></textarea>
+
+    <label for="timeOfIncident">Time of Incident:</label>
+    <input
+      type="datetime-local"
+      id="timeOfIncident"
+      [(ngModel)]="newReport.timeOfIncident"
+      name="timeOfIncident"
+      required
+    />
+
+    <label for="location">Location:</label>
+    <input
+      type="text"
+      id="location"
+      [(ngModel)]="newReport.location"
+      name="location"
+      required
+    />
+
+    <button type="submit">Add Report</button>
+  </form>
+
+  <h3>Search for a Report</h3>
+  <form (ngSubmit)="searchReport()">
+    <label for="searchReportId">Report ID:</label>
+    <input
+      type="text"
+      id="searchReportId"
+      [(ngModel)]="searchReportId"
+      name="searchReportId"
+      required
+    />
+
+    <label for="searchReportCode">Report Code:</label>
+    <input
+      type="text"
+      id="searchReportCode"
+      [(ngModel)]="searchReportCode"
+      name="searchReportCode"
+      required
+    />
+
+    <button type="submit">Search</button>
+  </form>
+
+  <div *ngIf="retrievedReport">
+    <h4>Retrieved Report</h4>
+    <!-- <p><strong>Report ID:</strong> {{ retrievedReport.reportId }}</p> -->
+    <!-- <p><strong>Report Code:</strong> {{ retrievedReport.reportCode }}</p> -->
+    <p>
+      <strong>Type of Incident:</strong> {{ retrievedReport.typeOfIncident }}
+    </p>
+    <p>
+      <strong>Description:</strong> {{ retrievedReport.descriptionOfIncident }}
+    </p>
+    <p>
+      <strong>Time of Incident:</strong> {{ retrievedReport.timeOfIncident }}
+    </p>
+    <p><strong>Location:</strong> {{ retrievedReport.location }}</p>
+    <p><strong>Status:</strong> {{ retrievedReport.status }}</p>
+    <p><strong>Message:</strong> {{ retrievedReport.message }}</p>
+  </div>
+</div>

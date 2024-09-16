@@ -1,0 +1,38 @@
+<div>
+  <h2>Manage Relief Camps</h2>
+
+  <form (ngSubmit)="createOrUpdateReliefCamp()">
+    <label>Name:</label>
+    <input [(ngModel)]="selectedCamp.name" name="name" required />
+
+    <label>Location:</label>
+    <input [(ngModel)]="selectedCamp.location" name="location" required />
+
+    <label>Capacity:</label>
+    <input
+      type="number"
+      [(ngModel)]="selectedCamp.capacity"
+      name="capacity"
+      required
+    />
+
+    <label>Contact Number:</label>
+    <input
+      [(ngModel)]="selectedCamp.contactNumber"
+      name="contactNumber"
+      required
+    />
+
+    <button type="submit">{{ isEditing ? "Update" : "Create" }}</button>
+    <button type="button" (click)="resetForm()">Clear</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let camp of reliefCamps">
+      <strong>{{ camp.name }}</strong> - {{ camp.location }} - Capacity:
+      {{ camp.capacity }} - Contact: {{ camp.contactNumber }}
+      <button (click)="selectCampForEdit(camp)">Edit</button>
+      <button (click)="deleteReliefCamp(camp.id!)">Delete</button>
+    </li>
+  </ul>
+</div>

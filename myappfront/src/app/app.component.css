@@ -1,0 +1,21 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+/* .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+app-header {
+  background-color: lightblue;
+  flex: 0 0 20%;
+}
+.main-content {
+  background-color: lightgreen;
+  flex: 0 0 50%;
+}
+app-footer {
+  background-color: lightcoral;
+  flex: 0 0 30%; 
+}*/

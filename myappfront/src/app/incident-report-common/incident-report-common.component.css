@@ -1,0 +1,50 @@
+.incident-form-container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.incident-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.incident-form-container div {
+  margin-bottom: 15px;
+}
+
+.incident-form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.incident-form-container input,
+.incident-form-container textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.incident-form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.incident-form-container button:disabled {
+  background-color: #ccc;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

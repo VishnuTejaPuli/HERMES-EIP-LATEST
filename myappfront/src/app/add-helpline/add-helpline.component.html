@@ -1,0 +1,78 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="container">
+  <h2>Add New Helpline Number</h2>
+  <form (ngSubmit)="onAddHelplineNumber()">
+    <div class="form-group">
+      <label for="helplineName">Name:</label>
+      <input
+        type="text"
+        id="helplineName"
+        class="form-control"
+        [(ngModel)]="helplineNumber.name"
+        name="helplineName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input
+        type="text"
+        id="phoneNumber"
+        class="form-control"
+        [(ngModel)]="helplineNumber.phoneNumber"
+        name="phoneNumber"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="region">Region:</label>
+      <input
+        type="text"
+        id="region"
+        class="form-control"
+        [(ngModel)]="helplineNumber.region"
+        name="region"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Helpline Number</button>
+  </form>
+
+  <h2>Add New Helpline Website</h2>
+  <form (ngSubmit)="onAddHelplineWebsite()">
+    <div class="form-group">
+      <label for="websiteName">Name:</label>
+      <input
+        type="text"
+        id="websiteName"
+        class="form-control"
+        [(ngModel)]="helplineWebsite.name"
+        name="websiteName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="websiteUrl">Website:</label>
+      <input
+        type="text"
+        id="websiteUrl"
+        class="form-control"
+        [(ngModel)]="helplineWebsite.website"
+        name="websiteUrl"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="websiteRegion">Region:</label>
+      <input
+        type="text"
+        id="websiteRegion"
+        class="form-control"
+        [(ngModel)]="helplineWebsite.region"
+        name="websiteRegion"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Helpline Website</button>
+  </form>
+</div>

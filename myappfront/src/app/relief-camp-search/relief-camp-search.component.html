@@ -1,0 +1,16 @@
+<div>
+  <h2>Search Relief Camps</h2>
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search by Name or Location"
+  />
+  <button (click)="searchCamps()">Search</button>
+
+  <ul>
+    <li *ngFor="let camp of reliefCamps">
+      <strong>{{ camp.name }}</strong> - {{ camp.location }} - Capacity:
+      {{ camp.capacity }} - Contact: {{ camp.contactNumber }}
+    </li>
+  </ul>
+</div>

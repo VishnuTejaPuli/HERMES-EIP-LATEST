@@ -1,0 +1,11 @@
+<app-navbar-admin></app-navbar-admin>
+<div>
+  <h2>Incident List</h2>
+  <ul>
+    <li *ngFor="let incident of incidents">
+      {{ incident.incidentType }} - {{ incident.description }} -
+      {{ incident.location }}
+      <button (click)="deleteIncident(incident.id!)">Delete</button>
+    </li>
+  </ul>
+</div>
